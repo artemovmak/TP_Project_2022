@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Hex.h"
-#include "Vector2.h"
+#include "../Graphics/Vectors/Vector2i.h"
 
 #define FieldVertSize 30
 #define FieldHorSize 30
@@ -9,12 +9,10 @@
 class Field {
  private:
   Hex field[FieldVertSize][FieldHorSize];
-
-  Field() {}
+  Field() = default;
   Field(const Field&) = delete;
   Field& operator=(const Field&) = delete;
- public:
+public:
   static Field& GetInstance();
-
-  Hex& GetHex(Vector2<int> coords);
+  Hex& GetHex(Vector2i coords);
 };

@@ -16,7 +16,7 @@ void KnightBuilder::BuildStrength() {
   unit->SetStrength(2);
 }
 void KnightBuilder::BuildPosition() {
-  unit->SetPosition(sf::Vector2i (10, 10));
+  unit->SetPosition(Vector2i (10, 10));
 }
 
 

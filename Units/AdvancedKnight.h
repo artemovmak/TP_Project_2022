@@ -1,6 +1,5 @@
 #pragma once
 #include "UnitBuilder.h"
-
 class AdvancedKnightBuilder : public UnitBuilder{
 public:
   AdvancedKnightBuilder();

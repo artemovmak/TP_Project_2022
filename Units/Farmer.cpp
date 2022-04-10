@@ -16,6 +16,6 @@ void FarmerBuilder::BuildStrength() {
   unit->SetStrength(0);
 }
 void FarmerBuilder::BuildPosition() {
-  unit->SetPosition(sf::Vector2i (10, 10));
+  unit->SetPosition(Vector2i (10, 10));
 }
 

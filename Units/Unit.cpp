@@ -6,9 +6,8 @@ void Unit::SetCost(size_t value) {
   cost = value;
 }
 
-void Unit::SetPosition(sf::Vector2i coordinates) {
-  position.x = coordinates.x;
-  position.y = coordinates.y;
+void Unit::SetPosition(Vector2i coordinates) {
+  position.SetVector2i(coordinates);
 }
 
 void Unit::SetStrength(size_t value)  {
@@ -35,7 +34,7 @@ size_t Unit::GetStrength() const {
   return strength;
 }
 
-sf::Vector2i Unit::GetPosition() const {
+Vector2i Unit::GetPosition() const {
   return position;
 }
 

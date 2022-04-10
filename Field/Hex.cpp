@@ -27,3 +27,7 @@ Building Hex::GetBuilding() {
 Unit Hex::GetUnit() {
   return unit_;
 }
+
+Hex Hex::GetHex() {
+  return *this;
+}

@@ -1,12 +1,12 @@
 #pragma once
 
-#include <TP_Project_2022/GamePatterns/TowersPattern/BuildingDirector.h>
-#include <TP_Project_2022/GamePatterns/UnitPattern/UnitDirector.h>
+#include "../Towers/BuildingDirector.h"
+#include "../Units/UnitDirector.h"
 
 enum HexInterior {
-  Nothing = 0;
-  Units = 1;
-  Buildings = 2;
+  Nothing = 0,
+  Units = 1,
+  Buildings = 2
 };
 
 class Hex {
@@ -15,10 +15,11 @@ class Hex {
   Unit unit_;
   Building building_;
  public:
+  size_t owner;
   void SetHexInterior(HexInterior value);
   void SetUnit(Unit unit);
   void SetBuilding(Building building);
-
+  Hex GetHex();
   HexInterior GetHexInterior();
   Unit GetUnit();
   Building GetBuilding();
