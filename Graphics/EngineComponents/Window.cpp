@@ -23,3 +23,7 @@ void Window::Display() {
 bool Window::IsOpen() {
   return window.isOpen();
 }
+
+void Window::Close() {
+  window.close();
+}

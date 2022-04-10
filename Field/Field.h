@@ -3,8 +3,8 @@
 #include "Hex.h"
 #include "../Graphics/Vectors/Vector2i.h"
 
-#define FieldVertSize 5
-#define FieldHorSize 5
+#define FieldVertSize 20
+#define FieldHorSize 20
 
 class Field {
  private:

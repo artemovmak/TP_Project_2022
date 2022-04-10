@@ -12,6 +12,7 @@ public:
   bool IsOpen();
   void Draw(const sf::CircleShape& odj);
   void Display();
+  void Close();
   Window();
   sf::RenderWindow& GetWindow();
 };

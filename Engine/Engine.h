@@ -5,12 +5,14 @@
 #include "../Graphics/Background/Background.h"
 #include "../Graphics/EngineComponents/Window.h"
 #include "../Graphics/GameComponents/HexGraphics.h"
-
+#include "../Graphics/Input/Mouse.h"
+#include "../Graphics/Input/Keyboard.h"
 class Engine {
 private:
   Window game_window;
   Background background;
   void Draw();
+  void Input();
   Field field;
 public:
   Engine() = default;
