@@ -6,6 +6,7 @@
 class UnitGraphics {
  private:
   sf::Sprite unit_;
+  sf::Texture texture;
   bool is_captured_;
  public:
   explicit UnitGraphics(const Unit& unit);
