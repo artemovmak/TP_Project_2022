@@ -17,6 +17,6 @@ void HexGraphics::SetDrawPosition(int i, int j) {
   hex.setPosition(static_cast<float>(j % 2 == 1 ? 75 : 50) + static_cast<float>(i)  * 50.f, 50 + static_cast<float>(j) * 40.f);
 }
 
-HexGraphics HexGraphics::GetHexTexture() {
-  return *this;
+sf::CircleShape HexGraphics::GetHexTexture() {
+  return hex;
 }

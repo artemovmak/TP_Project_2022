@@ -9,6 +9,6 @@ private:
 public:
   void ChangeColor(const Hex& tile);
   void SetDrawPosition(int i, int j);
-  HexGraphics GetHexTexture();
+  sf::CircleShape GetHexTexture();
   explicit HexGraphics(const Hex& tile);
 };

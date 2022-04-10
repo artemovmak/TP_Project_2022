@@ -1,6 +1,6 @@
-#include <iostream>
-#include "Units/UnitDirector.h"
+#include "Engine/Engine.h"
 
 int main() {
-
+  Engine engine;
+  engine.Start();
 }

@@ -7,7 +7,7 @@ class BuildingBuilder {
  public:
   BuildingBuilder();
 
-  std::shared_ptr<Unit> GetBuilding();
+  std::shared_ptr<Building> GetBuilding();
 
   void CreateNewBuilding();
 

@@ -3,7 +3,7 @@
 BuildingDirector::BuildingDirector() : building_builder(nullptr) {}
 BuildingDirector::~BuildingDirector() = default;
 
-void BuildingDirector::SetBuildingBuilder(BuildingBuilder *Builder) {
+void BuildingDirector::SetBuildingDirector(BuildingBuilder *Builder) {
   building_builder = Builder;
 }
 

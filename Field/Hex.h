@@ -15,7 +15,7 @@ class Hex {
   Unit unit_;
   Building building_;
  public:
-  size_t owner;
+  size_t owner = 1;
   void SetHexInterior(HexInterior value);
   void SetUnit(Unit unit);
   void SetBuilding(Building building);

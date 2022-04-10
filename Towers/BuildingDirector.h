@@ -1,7 +1,7 @@
 #pragma once
 #include "BuildingBuilder.h"
 #include "FarmBuilder.h"
-#include "TowerBuilder.h.h"
+#include "TowerBuilder.h"
 #include "AdvancedTowerBuilder.h"
 
 class BuildingDirector {

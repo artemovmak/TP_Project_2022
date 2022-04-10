@@ -15,20 +15,20 @@ void Building::SetStrength(size_t value)  {
   strength = value;
 }
 
-void Building::SetUnitType(size_t value) {
+void Building::SetBuildingType(size_t value) {
   building_type = value;
 }
 
-void Building::SetWage(size_t value) {
+void Building::SetIncome(size_t value) {
   income = value;
 }
 
-size_t Building::GetWage() const {
+size_t Building::GetIncome() const {
   return  income;
 }
 
 size_t Building::GetBuildingType() const {
-  return unit_type;
+  return building_type;
 }
 
 size_t Building::GetStrength() const {
