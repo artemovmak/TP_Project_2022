@@ -5,6 +5,7 @@
 #include "../Graphics/Background/Background.h"
 #include "../Graphics/EngineComponents/Window.h"
 #include "../Graphics/GameComponents/HexGraphics.h"
+#include "../Graphics/GameComponents/UnitGraphics.h"
 #include "../Graphics/Input/Mouse.h"
 #include "../Graphics/Input/Keyboard.h"
 class Engine {
@@ -13,8 +14,10 @@ private:
   Background background;
   void Draw();
   void Input();
+  void Update();
   Field field;
+  std::shared_ptr<Unit> ptr;
 public:
-  Engine() = default;
+  Engine();
   void Start();
 };

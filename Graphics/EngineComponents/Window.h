@@ -11,6 +11,7 @@ public:
   void Clear();
   bool IsOpen();
   void Draw(const sf::CircleShape& odj);
+  void Draw(const sf::Sprite& odj);
   void Display();
   void Close();
   Window();

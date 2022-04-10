@@ -16,6 +16,10 @@ void Window::Draw(const sf::CircleShape& obj) {
   window.draw(obj);
 }
 
+void Window::Draw(const sf::Sprite& odj) {
+  window.draw(odj);
+}
+
 void Window::Display() {
   window.display();
 }

@@ -4,7 +4,7 @@ void UnitGraphics::SetPosition(float i, float  j) {
   unit_.setPosition(i, j);
 }
 
-sf::Sprite UnitGraphics::GetSprite() {
+sf::Sprite& UnitGraphics::GetSprite() {
   return unit_;
 }
 
@@ -12,7 +12,7 @@ UnitGraphics::UnitGraphics(const Unit& unit) {
   sf::Texture texture;
   sf::Image image;
   if (unit.GetUnitType() == 0) {
-    image.loadFromFile("../Texture/man0_low.png");
+    image.loadFromFile("/home/antony/CLionProjects/TP_Project_2022/Texture/man0.jpg");
     texture.loadFromImage(image);
   }  //farmer
   if (unit.GetUnitType() == 1) {
@@ -27,6 +27,8 @@ UnitGraphics::UnitGraphics(const Unit& unit) {
     image.loadFromFile("../Texture/man3_low.png");
     texture.loadFromImage(image);
   }  //advanced knight
+  unit_.setTexture(texture);
+  unit_.setPosition(unit.GetPosition().GetX(), unit.GetPosition().GetY());
   is_captured_ = false;
 }
 

@@ -11,7 +11,7 @@ class UnitGraphics {
   explicit UnitGraphics(const Unit& unit);
 
   void SetPosition(float i, float j);
-  sf::Sprite GetSprite();
+  sf::Sprite& GetSprite();
 
   void Capture();
   void Stop();
