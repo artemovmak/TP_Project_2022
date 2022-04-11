@@ -10,7 +10,7 @@ sf::Sprite& UnitGraphics::GetSprite() {
 
 UnitGraphics::UnitGraphics(const Unit& unit) {
   if (unit.GetUnitType() == 0) {
-    texture.loadFromFile("/home/makarart/CLionProjects/GAMEWITHOUTRULES/Texture/man0_low.png");
+    texture.loadFromFile("../Texture/man0_low.png");
   }  //farmer
   if (unit.GetUnitType() == 1) {
     texture.loadFromFile("../Texture/man1_low.png");

@@ -5,7 +5,7 @@ void Engine::Update() {
     unit_graphics.SetPosition(v.GetX(), v.GetY());
     ptr->SetPosition({int(v.GetX()), int(v.GetY())});
   }
-  if ((unit_graphics.GetSprite().getGlobalBounds().contains
+ if ((unit_graphics.GetSprite().getGlobalBounds().contains
     (game_window.GetWindow().mapPixelToCoords(sf::Mouse::getPosition(game_window.GetWindow()))))
       && sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
     unit_graphics.Capture();

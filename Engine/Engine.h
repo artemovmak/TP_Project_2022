@@ -15,6 +15,7 @@ private:
   void Draw();
   void Input();
   void Update();
+  void StartingPosition();
   Field field;
   std::shared_ptr<Unit> ptr;
 public:
