@@ -19,12 +19,17 @@ void Window::DrawHex(Hex& obj, int i, int j) {
 }
 
 void Window::DrawUnit(Hex& obj, int i, int j) {
-  UnitGraphics unit_graph(obj.GetUnit());
-  unit_graph.SetPosition(static_cast<float>(j % 2 == 1 ? 75 : 50) + static_cast<float>(i)  * 50.f, 50 + static_cast<float>(j) * 40.f);
-  window.draw(unit_graph.GetSprite());
+  if (obj.GetHexInterior() == Units) {
+    UnitGraphics unit_graph(obj.GetUnit());
+    unit_graph.SetPosition(static_cast<float>(j % 2 == 1 ? 75 : 50) + static_cast<float>(i) * 50.f,
+                           50 + static_cast<float>(j) * 40.f);
+    window.draw(unit_graph.GetSprite());
+  }
 }
 
-
+void Window::Draw(const sf::Sprite &odj) {
+  window.draw(odj);
+}
 void Window::Display() {
   window.display();
 }

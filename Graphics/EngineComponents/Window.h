@@ -14,6 +14,7 @@ public:
   void Clear();
   bool IsOpen();
   void DrawHex(Hex& odj, int i, int j);
+  void Draw(const sf::Sprite& odj);
   void DrawUnit(Hex& odj, int i, int j);
   void Display();
   void Close();

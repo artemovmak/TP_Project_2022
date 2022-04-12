@@ -1,5 +1,5 @@
 #pragma once
-#include "../Units/Unit.h"
+#include "../UnitsImplement/Farmer.h"
 #include "../Towers/Building.h"
 #include "../Field/Field.h"
 #include "../Graphics/Background/Background.h"
@@ -8,6 +8,7 @@
 #include "../Graphics/GameComponents/UnitGraphics.h"
 #include "../Graphics/Input/Mouse.h"
 #include "../Graphics/Input/Keyboard.h"
+#include <iostream>
 class Engine {
 private:
   Window game_window;
@@ -17,7 +18,7 @@ private:
   void Update();
   void StartingPosition();
   Field field;
-  std::shared_ptr<Unit> ptr;
+  Farmer farmer;
 public:
   Engine();
   void Start();

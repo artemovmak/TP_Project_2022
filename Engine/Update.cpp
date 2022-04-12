@@ -1,6 +1,9 @@
 #include "Engine.h"
 
 void Engine::Update() {
+  if (farmer.GetGraphics().IsCapture()) {
+    farmer.GetGraphics().ChangeSkin(*farmer.GetUnit());
+  }
   /*if (unit_graphics.is_captured_) {
     unit_graphics.SetPosition(v.GetX(), v.GetY());
     ptr->SetPosition({int(v.GetX()), int(v.GetY())});
@@ -12,5 +15,4 @@ void Engine::Update() {
   } else {
     unit_graphics.Stop();
   }*/
-  ptr->SetPosition({30, 30});
 }

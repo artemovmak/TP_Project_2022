@@ -24,7 +24,7 @@ Building Hex::GetBuilding() {
   return building_;
 }
 
-Unit Hex::GetUnit() {
+Unit& Hex::GetUnit() {
   return unit_;
 }
 
