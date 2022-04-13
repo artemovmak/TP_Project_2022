@@ -18,6 +18,10 @@ void Unit::SetUnitType(size_t value) {
   unit_type = value;
 }
 
+void Unit::SetTexture(sf::Texture texture) {
+  unit_graph.SetTexture(texture);
+}
+
 void Unit::SetWage(size_t value) {
   wage = value;
 }

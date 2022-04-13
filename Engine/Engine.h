@@ -18,7 +18,7 @@ private:
   void Update();
   void StartingPosition();
   Field field;
-  Farmer farmer;
+  UnitDirector unit_director;
 public:
   Engine();
   void Start();

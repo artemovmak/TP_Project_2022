@@ -12,8 +12,8 @@ bool UnitGraphics::IsCapture() {
   return is_captured_;
 }
 UnitGraphics::UnitGraphics(Unit& unit) {
-  SetFarmer(unit);
   unit_.setPosition(unit.GetPosition().GetX(), unit.GetPosition().GetY());
+  is_captured_ = false;
   is_captured_ = false;
 }
 
@@ -24,8 +24,7 @@ void UnitGraphics::Stop() {
   is_captured_ = false;
 }
 
-void UnitGraphics::SetFarmer(Unit &unit) {
-  texture.loadFromFile("../Texture/man0_low.png");
+void UnitGraphics::SetTexture(const sf::Texture& texture) {
   unit_.setTexture(texture);
 }
 

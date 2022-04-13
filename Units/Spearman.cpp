@@ -19,3 +19,7 @@ void SpearmanBuilder::BuildPosition() {
   unit->SetPosition(Vector2i (10, 10));
 }
 
+void SpearmanBuilder::BuildTexture() {
+  unit->SetTexture(unit_texture.GetSpearmanTexture());
+}
+

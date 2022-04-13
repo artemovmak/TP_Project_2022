@@ -2,6 +2,7 @@
 #include "UnitBuilder.h"
 
 class SpearmanBuilder : public UnitBuilder{
+private:
 public:
   SpearmanBuilder();
   ~SpearmanBuilder() ;
@@ -11,4 +12,5 @@ public:
   void BuildWage() ;
   void BuildStrength() ;
   void BuildPosition() ;
+  void BuildTexture();
 };

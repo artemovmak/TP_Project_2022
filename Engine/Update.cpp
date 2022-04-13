@@ -3,6 +3,8 @@
 void Engine::Update() {
   if (farmer.GetGraphics().IsCapture()) {
     farmer.GetGraphics().ChangeSkin(*farmer.GetUnit());
+  } else {
+    farmer.GetGraphics().SetFarmer(*farmer.GetUnit());
   }
   /*if (unit_graphics.is_captured_) {
     unit_graphics.SetPosition(v.GetX(), v.GetY());

@@ -3,6 +3,8 @@ Window::Window() {
   resolution = Vector2f(static_cast<float>(sf::VideoMode::getDesktopMode().width), static_cast<float>(sf::VideoMode::getDesktopMode().height));
   window.create(sf::VideoMode(static_cast<int>(resolution.GetX()), static_cast<int>(resolution.GetY())),
                             "Super Mega Game");
+  window.setVerticalSyncEnabled(true);
+  window.setKeyRepeatEnabled(false);
 }
 sf::RenderWindow& Window::GetWindow() {
   return window;
