@@ -1,27 +1,34 @@
 #pragma once
 
-#include "../Towers/BuildingDirector.h"
-#include "../Units/UnitDirector.h"
+#include <cstddef>
+#include <memory>
+
+#include "../Vector/Vector.h"
+#include "../Units/Unit.h"
 
 enum HexInterior {
   Nothing = 0,
   Units = 1,
-  Buildings = 2
+  Buildings = 2,
 };
 
 class Hex {
- private:
-  HexInterior interior_ = Nothing;
-  Unit unit_;
-  Building building_;
  public:
-  Hex() = default;
-  size_t owner = 1;
+  Hex();
   void SetHexInterior(HexInterior value);
-  void SetUnit(Unit unit);
-  void SetBuilding(Building building);
-  Hex GetHex();
-  HexInterior GetHexInterior();
-  Unit& GetUnit();
-  Building GetBuilding();
+  HexInterior GetHexInterior() const;
+  void SetUnit(Unit);
+  Unit& GetUnit() const;
+  void SetBuilding(size_t);
+  size_t GetBuilding() const;
+  void SetOwner(size_t);
+  size_t GetOwner() const;
+  void SetPosition(Vector<int>);
+  Vector<int> GetPosition() const;
+ private:
+  HexInterior interior_;
+  std::shared_ptr<Unit> unit_;
+  size_t building_type_;
+  size_t owner_;
+  Vector<int> position_;
 };

@@ -1,48 +1,43 @@
 #include "Unit.h"
 
-Unit::Unit() = default;
+Unit::Unit() : unit_type_(0), cost_(0), wage_(0), strength_(0), position_(0, 0) {}
 
 void Unit::SetCost(size_t value) {
-  cost = value;
+  cost_ = value;
 }
 
-void Unit::SetPosition(Vector2i coordinates) {
-  position.SetVector2i(coordinates);
-}
-
-void Unit::SetStrength(size_t value)  {
-  strength = value;
-}
-
-void Unit::SetUnitType(size_t value) {
-  unit_type = value;
-}
-
-void Unit::SetTexture(sf::Texture texture) {
-  unit_graph.SetTexture(texture);
+void Unit::SetPosition(Vector<int> coordinates) {
+  position_.SetVector(coordinates);
 }
 
 void Unit::SetWage(size_t value) {
-  wage = value;
+  wage_ = value;
+}
+
+void Unit::SetStrength(size_t value)  {
+  strength_ = value;
+}
+
+void Unit::SetUnitType(size_t value) {
+  unit_type_ = value;
 }
 
 size_t Unit::GetWage() const {
-  return  wage;
+  return wage_;
 }
 
 size_t Unit::GetUnitType() const {
-  return unit_type;
+  return unit_type_;
 }
 
 size_t Unit::GetStrength() const {
-  return strength;
+  return strength_;
 }
 
-Vector2i Unit::GetPosition() const {
-  return position;
+Vector<int> Unit::GetPosition() const {
+  return position_;
 }
 
 size_t Unit::GetCost() const {
-  return cost;
+  return cost_;
 }
-Unit::~Unit() = default;

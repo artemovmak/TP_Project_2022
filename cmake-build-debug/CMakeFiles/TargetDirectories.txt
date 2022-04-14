@@ -1,0 +1,3 @@
+/home/antony/CLionProjects/TP_Project_2022/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/antony/CLionProjects/TP_Project_2022/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/antony/CLionProjects/TP_Project_2022/cmake-build-debug/CMakeFiles/MySlay.dir
