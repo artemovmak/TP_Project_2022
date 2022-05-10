@@ -4,10 +4,8 @@
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
 
-#include "../Vector/Vector.h"
-
-#define UnitIconPosition 300, 900
-#define BuildingIconPosition 500, 900
+#include "../Coords/Coords.h"
+#include "../Configuration/Configuration.h"
 
 class MenuGraphics {
  public:
@@ -16,8 +14,8 @@ class MenuGraphics {
 
   MenuGraphics();
 
-  bool UnitIconContains(Vector<int>) const;
-  bool BuildingIconContains(Vector<int>) const;
+  bool UnitIconContains(Coords<int>) const;
+  bool BuildingIconContains(Coords<int>) const;
   sf::Sprite GetUnitIcon() const;
   sf::Sprite GetBuildingIcon() const;
   void Draw(sf::RenderWindow& window);

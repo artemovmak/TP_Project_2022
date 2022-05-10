@@ -3,7 +3,7 @@
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Texture.hpp>
 
-#include "../Vector/Vector.h"
+#include "../Coords/Coords.h"
 #include "../Units/Unit.h"
 
 class UnitGraphics {
@@ -13,7 +13,7 @@ class UnitGraphics {
  public:
   explicit UnitGraphics(const Unit&);
 
-  void SetPosition(Vector<int>);
+  void SetPosition(Coords<int>);
   sf::Sprite& GetSprite();
   void SetTexture(const sf::Texture& texture);
 };

@@ -12,6 +12,6 @@ public:
   explicit HexGraphics(const Hex& tile);
 
   void SetColor(sf::Color);
-  void SetPosition(Vector<int>);
+  void SetPosition(Coords<int>);
   sf::CircleShape GetHexTexture();
 };

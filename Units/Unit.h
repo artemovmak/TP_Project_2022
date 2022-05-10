@@ -2,7 +2,7 @@
 
 #include <cstddef>
 
-#include "../Vector/Vector.h"
+#include "../Coords/Coords.h"
 
 class Unit {
  public:
@@ -12,13 +12,13 @@ class Unit {
   void SetCost(size_t value);
   void SetWage(size_t value);
   void SetStrength(size_t value);
-  void SetPosition(Vector<int> coordinates);
+  void SetPosition(Coords<int> coordinates);
 
   size_t GetUnitType() const;
   size_t GetCost() const;
   size_t GetWage() const;
   size_t GetStrength() const;
-  Vector<int> GetPosition() const;
+  Coords<int> GetPosition() const;
 
   ~Unit() = default;
  private:
@@ -26,5 +26,5 @@ class Unit {
   size_t cost_;
   size_t wage_;
   size_t strength_;
-  Vector<int> position_;
+  Coords<int> position_;
 };

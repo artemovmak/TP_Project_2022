@@ -6,7 +6,7 @@ void Unit::SetCost(size_t value) {
   cost_ = value;
 }
 
-void Unit::SetPosition(Vector<int> coordinates) {
+void Unit::SetPosition(Coords<int> coordinates) {
   position_.SetVector(coordinates);
 }
 
@@ -34,7 +34,7 @@ size_t Unit::GetStrength() const {
   return strength_;
 }
 
-Vector<int> Unit::GetPosition() const {
+Coords<int> Unit::GetPosition() const {
   return position_;
 }
 

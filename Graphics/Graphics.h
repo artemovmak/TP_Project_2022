@@ -4,6 +4,8 @@
 #include <SFML/Window/Keyboard.hpp>
 #include <SFML/Window/Mouse.hpp>
 
+#include <vector>
+
 #include "../Field/Field.h"
 #include "FieldGraphics.h"
 #include "UnitGraphics.h"
@@ -15,7 +17,8 @@ class Graphics {
   bool Input(Field);
   void Draw(Field);
  private:
-  Vector<float> resolution_;
+  std::vector<UnitGraphics> units_graphics;
+  Coords<float> resolution_;
   MenuGraphics menu_graphics_;
   sf::RenderWindow window_;
   FieldGraphics field_graphics_;

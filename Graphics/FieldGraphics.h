@@ -8,9 +8,9 @@ class FieldGraphics {
  public:
   FieldGraphics();
 
-  HexGraphics& GetHexGraphics(Vector<int>);
+  HexGraphics& GetHexGraphics(Coords<int>);
   void SetColor(sf::Color);
   void Draw(sf::RenderWindow& window);
  private:
-  HexGraphics field_graphics[FieldVertSize][FieldHorSize];
+  HexGraphics field_graphics[kFieldHeight][kFieldWidth];
 };

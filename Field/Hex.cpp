@@ -1,6 +1,6 @@
 #include "Hex.h"
 
-Hex::Hex() : interior_(Nothing), unit_(nullptr), building_type_(0), owner_(0) {}
+Hex::Hex() : interior_(Nothing), unit_(), building_type_(0), owner_(0) {}
 
 void Hex::SetHexInterior(HexInterior value) {
   interior_ = value;
@@ -11,11 +11,11 @@ HexInterior Hex::GetHexInterior() const {
 }
 
 void Hex::SetUnit(Unit unit) {
-  unit_ = std::make_shared<Unit>(unit);
+  unit_ = unit;
 }
 
-Unit& Hex::GetUnit() const {
-  return *unit_;
+Unit& Hex::GetUnit() {
+  return unit_;
 }
 
 void Hex::SetBuilding(size_t type) {
@@ -34,13 +34,13 @@ size_t Hex::GetOwner() const {
   return owner_;
 }
 
-void Hex::SetPosition(Vector<int> v) {
-  if (unit_ != nullptr) {
-    unit_->SetPosition(v);
+void Hex::SetPosition(Coords<int> v) {
+  if (this->GetHexInterior() == Units) {
+    unit_.SetPosition(v);
   }
   position_.SetVector(v);
 }
 
-Vector<int> Hex::GetPosition() const {
+Coords<int> Hex::GetPosition() const {
   return position_;
 }

@@ -3,7 +3,7 @@
 #include <cstddef>
 #include <memory>
 
-#include "../Vector/Vector.h"
+#include "../Coords/Coords.h"
 #include "../Units/Unit.h"
 
 enum HexInterior {
@@ -18,17 +18,17 @@ class Hex {
   void SetHexInterior(HexInterior value);
   HexInterior GetHexInterior() const;
   void SetUnit(Unit);
-  Unit& GetUnit() const;
+  Unit& GetUnit();
   void SetBuilding(size_t);
   size_t GetBuilding() const;
   void SetOwner(size_t);
   size_t GetOwner() const;
-  void SetPosition(Vector<int>);
-  Vector<int> GetPosition() const;
+  void SetPosition(Coords<int>);
+  Coords<int> GetPosition() const;
  private:
   HexInterior interior_;
-  std::shared_ptr<Unit> unit_;
+  Unit unit_;
   size_t building_type_;
   size_t owner_;
-  Vector<int> position_;
+  Coords<int> position_;
 };

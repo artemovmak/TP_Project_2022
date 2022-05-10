@@ -26,7 +26,7 @@ UnitGraphics::UnitGraphics(const Unit& unit) {
   }
 }
 
-void UnitGraphics::SetPosition(Vector<int> v) {
+void UnitGraphics::SetPosition(Coords<int> v) {
   unit_sprite_.setPosition(static_cast<float>(v.x), static_cast<float>(v.y));
 }
 
